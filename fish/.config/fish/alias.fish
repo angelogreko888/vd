@@ -101,7 +101,7 @@ alias ugm='sudo update-grub'
 alias ccc='du -sh ~/.cache/'
 alias ccd='rm -rf ~/.cache/*'
 
-alias pi='sudo xbps-install -Ay'
+alias pi='sudo xbps-install -y'
 alias pss='sudo xbps-query -Rs'
 alias pui='sudo xbps-remove -F'
 alias tm='sudo fstrim -av'
