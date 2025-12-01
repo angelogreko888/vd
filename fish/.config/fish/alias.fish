@@ -109,7 +109,7 @@ alias tm='sudo fstrim -av'
 alias pm='sudo nano /etc/pacman.d/mirrorlist'
 alias pl='sudo cat /var/log/pacman.log'
 
-alias u='sudo xbps-install -SuAy'
+alias u='sudo xbps-install -Suy'
 
 alias nwc='nano ~/.config/waybar/config'
 alias nws='nano ~/.config/waybar/style.css'
