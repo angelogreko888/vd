@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="codeberg-auto">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>dwl/protocols/dwl-ipc-unstable-v2.xml at ipc - notchoc/dwl - Codeberg.org</title>
+	<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiQ29kZWJlcmcub3JnIiwic2hvcnRfbmFtZSI6IkNvZGViZXJnLm9yZyIsInN0YXJ0X3VybCI6Imh0dHBzOi8vY29kZWJlcmcub3JnLyIsImljb25zIjpbeyJzcmMiOiJodHRwczovL2NvZGViZXJnLm9yZy9hc3NldHMvaW1nL2xvZ28ucG5nIiwidHlwZSI6ImltYWdlL3BuZyIsInNpemVzIjoiNTEyeDUxMiJ9LHsic3JjIjoiaHR0cHM6Ly9jb2RlYmVyZy5vcmcvYXNzZXRzL2ltZy9sb2dvLnN2ZyIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwic2l6ZXMiOiI1MTJ4NTEyIn1dfQ==">
+	<meta name="author" content="notchoc">
+	<meta name="description" content="dwl - dwm for Wayland">
+	<meta name="keywords" content="git,non-profit,foss,oss,free,software,open,source,code,hosting">
+	<meta name="referrer" content="no-referrer">
+
+
+	<link rel="alternate" type="application/atom+xml" title="" href="/notchoc/dwl.atom">
+	<link rel="alternate" type="application/rss+xml" title="" href="/notchoc/dwl.rss">
+
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/assets/img/favicon.png" type="image/png">
+	
+<script>
+	
+	window.addEventListener('error', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.addEventListener('unhandledrejection', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.config = {
+		appUrl: 'https:\/\/codeberg.org\/',
+		appSubUrl: '',
+		assetVersionEncoded: encodeURIComponent('13.0.0-dev-651-a48dce80~gitea-1.22.0'), 
+		assetUrlPrefix: '\/assets',
+		runModeIsProd:  true ,
+		customEmojis: new Set(["git","gitea","codeberg","gitlab","github","gogs","forgejo"]),
+		csrfToken: 'qfgO1IW1qru6-QHCRUWyH0UE8tk6MTc2NDE4Nzg5NzE2MjYzMjcxMA',
+		pageData: {"DATETIMESTRINGS":{"FUTURE":"in future","NOW":"now","relativetime.1day":"yesterday","relativetime.1month":"last month","relativetime.1week":"last week","relativetime.1year":"last year","relativetime.2days":"two days ago","relativetime.2months":"two months ago","relativetime.2weeks":"two weeks ago","relativetime.2years":"two years ago"},"PLURALSTRINGS_FALLBACK":{},"PLURALSTRINGS_LANG":{"relativetime.days":["%d day ago","%d days ago"],"relativetime.hours":["%d hour ago","%d hours ago"],"relativetime.mins":["%d minute ago","%d minutes ago"],"relativetime.months":["%d month ago","%d months ago"],"relativetime.weeks":["%d week ago","%d weeks ago"],"relativetime.years":["%d year ago","%d years ago"]},"PLURAL_RULE_FALLBACK":0,"PLURAL_RULE_LANG":0},
+		notificationSettings: {"EventSourceUpdateTime":10000,"MaxTimeout":60000,"MinTimeout":10000,"TimeoutStep":10000}, 
+		enableTimeTracking:  true ,
+		
+		mermaidMaxSourceCharacters:  50000 ,
+		
+		i18n: {
+			copy_success: "Copied!",
+			copy_error: "Copy failed",
+			error_occurred: "An error occurred",
+			network_error: "Network error",
+			remove_label_str: "Remove item \"%s\"",
+			modal_confirm: "Confirm",
+			modal_cancel: "Cancel",
+			more_items: "More items",
+			incorrect_root_url: "This Forgejo instance is configured to be served on \"https://codeberg.org/\". You are currently viewing Forgejo through a different URL, which may cause parts of the application to break. The canonical URL is controlled by Forgejo admins via the ROOT_URL setting in the app.ini.",
+		},
+	};
+	
+	window.config.pageData = window.config.pageData || {};
+</script>
+<script src="/assets/js/webcomponents.js?v=13.0.0-dev-651-a48dce80~gitea-1.22.0"></script>
+
+	
+
+	
+	<meta property="og:title" content="dwl/protocols/dwl-ipc-unstable-v2.xml at ipc">
+
+
+	<meta property="og:url" content="https://codeberg.org//notchoc/dwl/src/branch/ipc/protocols/dwl-ipc-unstable-v2.xml">
+
+
+	<meta property="og:type" content="object">
+
+
+	<meta property="og:image" content="https://codeberg.org/notchoc/dwl/-/summary-card">
+	
+		<meta property="og:image:width" content="1200">
+	
+	
+		<meta property="og:image:height" content="600">
+	
+	
+		<meta property="og:image:alt" content="Summary card of repository notchoc/dwl, described as: dwm for Wayland">
+	
+
+<meta property="og:site_name" content="Codeberg.org">
+
+	<link rel="stylesheet" href="/assets/css/index.css?v=13.0.0-dev-651-a48dce80~gitea-1.22.0">
+<link rel="stylesheet" href="/assets/css/theme-codeberg-auto.css?v=13.0.0-dev-651-a48dce80~gitea-1.22.0">
+
+	
+</head>
+<body class="no-js" hx-headers='{"x-csrf-token": "qfgO1IW1qru6-QHCRUWyH0UE8tk6MTc2NDE4Nzg5NzE2MjYzMjcxMA"}' hx-swap="outerHTML" hx-ext="morph" hx-push-url="false">
+	
+	<noscript>
+		<style>
+			#tou-announcement { display: flex !important; justify-content: center; }
+			#tou-announcement > :first-child, #tou-announcement > :last-child { display: none; }
+		</style>
+	</noscript>
+	<div id="tou-announcement" class="tw-hidden">
+		<div style="width: 108.3px"></div>
+		<span>Codeberg has changed its Terms of Use to allow more licenses for your projects. For more information, read <a href="https://blog.codeberg.org/letter-from-codeberg-onwards-and-upwards.html">our blog post</a>.</span>
+		<button class="ui secondary button small"><svg viewBox="0 0 16 16" class="svg octicon-x" aria-hidden="true" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg> Dismiss</button>
+	</div>
+	<div class="full height">
+		<noscript>
+			<div class="tw-ml-2 tw-mr-2 tw-text-center tw-text-text-light-2">This website requires JavaScript.</div>
+		</noscript>
+
+		
+
+		
+			
+
+
+<nav id="navbar" aria-label="Navigation bar">
+	<div class="navbar-left ui secondary menu">
+		
+		<a class="item" id="navbar-logo" href="/" aria-label="Home">
+			<img width="30" height="30" src="https://design.codeberg.org/logo-kit/icon_inverted.svg" aria-hidden="true">
+		</a>
+
+		
+		<div class="ui secondary menu item navbar-mobile-right only-mobile">
+			
+			<button class="item tw-w-auto ui icon mini button tw-p-2 tw-m-0" id="navbar-expand-toggle" aria-label="Toggle menu"><svg viewBox="0 0 16 16" class="svg octicon-three-bars" aria-hidden="true" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75M1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5"/></svg></button>
+		</div>
+
+		
+		
+			<a class="item" href="/explore/repos">Explore</a>
+		
+
+		
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F">About</a>
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/faq/">FAQ</a>
+			<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.codeberg.org">Help</a>
+		
+
+		<a class="item donation-pretty" href="https://donate.codeberg.org">Donate</a>
+
+	</div>
+
+	
+	<div class="navbar-right ui secondary menu">
+		
+			
+				<a class="item" href="/user/sign_up">
+					<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-person" aria-hidden="true" width="16" height="16"><path d="M10.561 8.073a6 6 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6 6 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0M10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/></svg>
+					<span>Register</span>
+				</a>
+			
+			<a class="item" rel="nofollow" href="/user/login?redirect_to=%2fnotchoc%2fdwl%2fsrc%2fbranch%2fipc%2fprotocols%2fdwl-ipc-unstable-v2.xml">
+				<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-sign-in" aria-hidden="true" width="16" height="16"><path d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm6.56 4.5h5.69a.75.75 0 0 1 0 1.5H8.56l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734Z"/></svg>
+				<span>Sign in</span>
+			</a>
+		
+	</div>
+</nav>
+
+		
+
+
+
+<div role="main" aria-label="dwl/protocols/dwl-ipc-unstable-v2.xml at ipc" class="page-content repository file list ">
+	<div class="secondary-nav">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="flex-item tw-items-center">
+				<div class="flex-item-leading">
+					
+
+	<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="24" height="24"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg>
+
+
+				</div>
+				<div class="flex-item-main">
+					<div class="flex-item-title gt-font-18">
+						<a class="muted gt-font-normal" href="/notchoc">notchoc</a>/<a class="muted" href="/notchoc/dwl">dwl</a>
+					</div>
+				</div>
+				<div class="flex-item-trailing">
+					
+					
+						
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="repo-buttons button-row">
+					
+					
+					
+					
+					<a class="ui compact small basic button" href="/notchoc/dwl.rss" data-tooltip-content="RSS feed">
+						<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="16" height="16"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+					</a>
+					
+					<form hx-boost="true" hx-target="this" method="post" action="/notchoc/dwl/action/watch">
+	<div class="ui labeled button" data-tooltip-content="Sign in to watch this repository.">
+		<button type="submit" class="ui compact small basic button" disabled>
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-eye" aria-hidden="true" width="16" height="16"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14s-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2M1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5s2.825-.742 3.955-1.715c1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5s-2.825.742-3.955 1.715c-1.124.967-1.954 2.096-2.366 2.717M8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10"/></svg><span class="text not-mobile">Watch</span>
+			
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/notchoc/dwl/watchers">
+			1
+		</a>
+	</div>
+</form>
+
+					
+					<form hx-boost="true" hx-target="this" method="post" action="/notchoc/dwl/action/star">
+	<div class="ui labeled button" data-tooltip-content="Sign in to star this repository.">
+		<button type="submit" class="ui compact small basic button" disabled>
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-star" aria-hidden="true" width="16" height="16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg><span class="text not-mobile">Star</span>
+			
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/notchoc/dwl/stars">
+			0
+		</a>
+	</div>
+</form>
+
+					
+					
+					
+
+	<div class="ui labeled button
+		
+			disabled
+		"
+		
+			data-tooltip-content="Sign in to fork this repository."
+		
+	>
+		<a class="ui compact small basic button"
+			
+				
+			
+		>
+			<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="16" height="16"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg><span class="text not-mobile">Fork</span>
+		</a>
+		<div class="ui small modal" id="fork-repo-modal">
+			<div class="header">
+				You've already forked dwl
+			</div>
+			<div class="content tw-text-left">
+				<div class="ui list">
+					
+				</div>
+				
+			</div>
+		</div>
+		<a class="ui basic label" href="/notchoc/dwl/forks">
+			0
+		</a>
+	</div>
+
+
+
+					
+					
+				</div>
+			
+		</div>
+		
+		<div class="fork-flag">forked from <a href="/dwl/dwl">dwl/dwl</a></div>
+		
+	</div>
+
+	<overflow-menu class="ui container secondary pointing tabular top attached borderless menu tw-pt-0 tw-my-0">
+		
+			<div class="overflow-menu-items">
+				
+					<a class="active item" href="/notchoc/dwl/src/branch/ipc">
+						<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg> Code
+					</a>
+				
+
+				
+
+				
+
+				
+					<a class="item" href="/notchoc/dwl/pulls">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg> Pull requests
+						
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+					<a class="item" href="/notchoc/dwl/activity">
+						<svg viewBox="0 0 16 16" class="svg octicon-pulse" aria-hidden="true" width="16" height="16"><path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.75.75 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.75.75 0 0 1 6 2"/></svg> Activity
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+			</div>
+		
+	</overflow-menu>
+	<div class="ui tabs divider"></div>
+</div>
+
+	<div class="ui container ">
+		
+
+
+
+
+	<div id="flash-message" hx-swap-oob="true"></div>
+
+
+		
+		
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+		
+		
+		
+		<div class="repo-button-row">
+			<div class="tw-gap-y-2 button-sequence">
+				
+
+
+
+
+
+
+	
+
+
+
+
+<script type="module">
+	const data = {
+		'textReleaseCompare': "Compare",
+		'textCreateTag': "Create tag %s",
+		'textCreateBranch': "Create branch %s",
+		'textCreateBranchFrom': "from \"%s\"",
+		'textBranches': "Branches",
+		'textTags': "Tags",
+		'textDefaultBranchLabel': "default",
+
+		'mode': 'branches',
+		'showBranchesInDropdown':  true ,
+		'searchFieldPlaceholder': 'Filter branch or tag...',
+		'branchForm':  null ,
+		'disableCreateBranch':  true ,
+		'setAction':  null ,
+		'submitForm':  null ,
+		'viewType': "branch",
+		'refName': "ipc",
+		'commitIdShort': "b4753ed2a0",
+		'tagName': "",
+		'branchName': "ipc",
+		'noTag':  null ,
+		'defaultSelectedRefName': "ipc",
+		'repoDefaultBranch': "custom",
+		'enableFeed':  true ,
+		'rssURLPrefix': '\/notchoc\/dwl/rss/branch/',
+		'branchURLPrefix': '\/notchoc\/dwl/src/branch/',
+		'branchURLSuffix': '/protocols\/dwl-ipc-unstable-v2.xml',
+		'tagURLPrefix': '\/notchoc\/dwl/src/tag/',
+		'tagURLSuffix': '/protocols\/dwl-ipc-unstable-v2.xml',
+		'repoLink': "/notchoc/dwl",
+		'treePath': "protocols/dwl-ipc-unstable-v2.xml",
+		'branchNameSubURL': "branch/ipc",
+		'noResults': "No results found.",
+	};
+	
+	window.config.pageData.branchDropdownDataList = window.config.pageData.branchDropdownDataList || [];
+	window.config.pageData.branchDropdownDataList.push(data);
+</script>
+
+<div class="js-branch-tag-selector ">
+	
+	<div class="ui dropdown custom">
+		<button class="branch-dropdown-button gt-ellipsis ui basic small compact button tw-flex tw-m-0">
+			<span class="text tw-flex tw-items-center tw-mr-1 gt-ellipsis">
+				
+					
+						<svg viewBox="0 0 16 16" class="svg octicon-git-branch" aria-hidden="true" width="16" height="16"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.5 2.5 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25m-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0m8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5M4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"/></svg>
+					
+					<strong ref="dropdownRefName" class="tw-ml-2 tw-inline-block gt-ellipsis">ipc</strong>
+				
+			</span>
+			<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+		</button>
+	</div>
+</div>
+
+				
+					
+					
+						
+					
+					
+					
+					<a id="new-pull-request" role="button" class="ui compact basic button" href="/dwl/dwl/compare/main...notchoc/dwl:ipc"
+						data-tooltip-content="Compare">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg>
+					</a>
+				
+				
+				
+
+				
+
+				
+				
+					<span class="breadcrumb repo-path tw-ml-1">
+						<a class="section" href="/notchoc/dwl/src/branch/ipc" title="dwl">dwl</a><span class="breadcrumb-divider">/</span><span class="section"><a href="/notchoc/dwl/src/branch/ipc/protocols" title="protocols">protocols</a></span><span class="breadcrumb-divider">/</span><span class="active section" title="dwl-ipc-unstable-v2.xml">dwl-ipc-unstable-v2.xml</span>
+								<button class="btn interact-fg tw-p-2" data-clipboard-text="protocols/dwl-ipc-unstable-v2.xml" data-tooltip-content="Copy path"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button></span>
+				
+			</div>
+			<div class="tw-flex tw-items-center">
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		
+
+
+		
+			<div class="tab-size-4 non-diff-file-content">
+
+	
+		<div id="repo-file-commit-box" class="ui segment list-header tw-mb-4 tw-flex tw-justify-between">
+			<div class="latest-commit">
+				
+	
+		<img loading="lazy" alt="" class="ui avatar tw-align-middle tw-mr-2" src="/avatars/6434ac0ed19f6ba89783db35e3b7f7b6141d5a8bf36da91d60e3b2d2075af830?size=48" title="notchoc" width="24" height="24"/>
+		
+			<a class="muted author-wrapper" title="choc" href="/notchoc"><strong>choc</strong></a>
+		
+	
+	
+
+	
+	
+		
+			
+		
+	
+
+<a href="/notchoc/dwl/commit/b4753ed2a0d585bc4c67cad3c565ac3435171080" rel="nofollow" class="sha label isSigned isVerified">
+	<span class="shortsha">b4753ed2a0</span><div class="signature">
+	
+		<span class="signature-author" title="notchoc / SHA256:IWTmMDoSIG7dnNZRAnippRNratAGmJJcFapG3bQrHjM">
+			
+				<svg viewBox="0 0 14 16" class="svg gitea-lock" aria-hidden="true" width="16" height="16"><path d="M12.5 7h-.75V4.75A4.756 4.756 0 0 0 7 0a4.756 4.756 0 0 0-4.75 4.75V7H1.5A1.5 1.5 0 0 0 0 8.5v6A1.5 1.5 0 0 0 1.5 16h11a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 12.5 7M9.25 7h-4.5V4.75C4.75 3.51 5.76 2.5 7 2.5s2.25 1.01 2.25 2.25z"/></svg>
+				<img loading="lazy" alt="" class="ui avatar tw-align-middle" src="/avatars/6434ac0ed19f6ba89783db35e3b7f7b6141d5a8bf36da91d60e3b2d2075af830?size=56" title="notchoc" width="28" height="28"/>
+			
+		</span>
+	
+</div>
+</a>
+
+	
+
+	
+	<span class="grey commit-summary" title="implement dwl-ipc-unstable-v2"><span class="message-wrapper"><a href="/notchoc/dwl/commit/b4753ed2a0d585bc4c67cad3c565ac3435171080" class="default-link muted">implement dwl-ipc-unstable-v2</a></span>
+		
+			<button class="ui button js-toggle-commit-body ellipsis-button" aria-expanded="false">...</button>
+			<pre class="commit-body tw-hidden"><a href="https://codeberg.org/dwl/dwl-patches/wiki/ipc" class="link">https://codeberg.org/dwl/dwl-patches/wiki/ipc</a></pre>
+		
+	</span>
+
+
+			</div>
+			
+				
+					<div class="text grey age">
+						<relative-time prefix="" tense="past" datetime="2024-10-11T08:42:22+08:00" data-tooltip-content data-tooltip-interactive="true">2024-10-11 08:42:22 +08:00</relative-time>
+					</div>
+				
+			
+		</div>
+	
+
+	<h4 class="file-header ui top attached header tw-flex tw-items-center tw-justify-between tw-flex-wrap">
+		<div class="file-header-left tw-flex tw-items-center tw-py-2 tw-pr-4">
+			
+				<div class="file-info tw-font-mono">
+	
+	
+		<div class="file-info-entry">
+			181 lines
+		</div>
+	
+	
+	
+		<div class="file-info-entry">
+			7.2 KiB
+		</div>
+	
+	
+	
+		<div class="file-info-entry">
+			XML
+		</div>
+	
+	
+	
+	
+	
+</div>
+
+			
+		</div>
+		<div class="file-header-right file-actions tw-flex tw-items-center tw-flex-wrap">
+			
+			
+				<div class="ui buttons tw-mr-1">
+					
+					<a class="ui mini basic button" href="/notchoc/dwl/raw/branch/ipc/protocols/dwl-ipc-unstable-v2.xml">Raw</a>
+					
+						<a class="ui mini basic button" href="/notchoc/dwl/src/commit/b4753ed2a0d585bc4c67cad3c565ac3435171080/protocols/dwl-ipc-unstable-v2.xml">Permalink</a>
+					
+					
+						<a class="ui mini basic button" href="/notchoc/dwl/blame/branch/ipc/protocols/dwl-ipc-unstable-v2.xml">Blame</a>
+					
+					<a class="ui mini basic button" href="/notchoc/dwl/commits/branch/ipc/protocols/dwl-ipc-unstable-v2.xml">History</a>
+					
+				</div>
+				<a download class="btn-octicon" href="/notchoc/dwl/raw/branch/ipc/protocols/dwl-ipc-unstable-v2.xml" data-tooltip-content="Download file">
+					<svg viewBox="0 0 16 16" class="svg octicon-download" aria-hidden="true" width="16" height="16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06z"/></svg>
+				</a>
+				<a href="#" id="copy-content" class="btn-octicon " data-tooltip-content="Copy content">
+					<svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+				</a>
+				
+					
+						<a class="btn-octicon" href="/notchoc/dwl/rss/branch/ipc/protocols/dwl-ipc-unstable-v2.xml" data-tooltip-content="RSS feed">
+							<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="14" height="14"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+						</a>
+					
+				
+				
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must fork this repository to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-pencil" aria-hidden="true" width="16" height="16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg>
+						</span>
+					
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must have write access to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-trash" aria-hidden="true" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75M4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.75 1.75 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15M6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25"/></svg>
+						</span>
+					
+				
+			
+			
+		</div>
+	</h4>
+	<div class="ui bottom attached table unstackable segment">
+		
+			
+	
+
+
+		
+		<div class="file-view code-view">
+			
+				
+				<table>
+					<tbody>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L1" data-line-number="1"></span></td>
+							
+							<td rel="L1" class="lines-code chroma"><code class="code-inner"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L2" data-line-number="2"></span></td>
+							
+							<td rel="L2" class="lines-code chroma"><code class="code-inner"><span class="c">&lt;!--</span><span class="c">
+</span></code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L3" data-line-number="3"></span></td>
+							
+							<td rel="L3" class="lines-code chroma"><code class="code-inner"><span class="c">This is largely ripped from somebar&#39;s ipc patchset; just with some personal modifications.
+</span></code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L4" data-line-number="4"></span></td>
+							
+							<td rel="L4" class="lines-code chroma"><code class="code-inner"><span class="c">I would probably just submit raphi&#39;s patchset but I don&#39;t think that would be polite.
+</span></code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L5" data-line-number="5"></span></td>
+							
+							<td rel="L5" class="lines-code chroma"><code class="code-inner"><span class="c"></span><span class="c">--&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L6" data-line-number="6"></span></td>
+							
+							<td rel="L6" class="lines-code chroma"><code class="code-inner"><span class="nt">&lt;protocol</span> <span class="na">name=</span><span class="s">&#34;dwl_ipc_unstable_v2&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L7" data-line-number="7"></span></td>
+							
+							<td rel="L7" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;inter-proccess-communication about dwl&#39;s state&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L8" data-line-number="8"></span></td>
+							
+							<td rel="L8" class="lines-code chroma"><code class="code-inner">      This protocol allows clients to update and get updates from dwl.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L9" data-line-number="9"></span></td>
+							
+							<td rel="L9" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L10" data-line-number="10"></span></td>
+							
+							<td rel="L10" class="lines-code chroma"><code class="code-inner">      Warning! The protocol described in this file is experimental and
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L11" data-line-number="11"></span></td>
+							
+							<td rel="L11" class="lines-code chroma"><code class="code-inner">      backward incompatible changes may be made. Backward compatible
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L12" data-line-number="12"></span></td>
+							
+							<td rel="L12" class="lines-code chroma"><code class="code-inner">      changes may be added together with the corresponding interface
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L13" data-line-number="13"></span></td>
+							
+							<td rel="L13" class="lines-code chroma"><code class="code-inner">      version bump.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L14" data-line-number="14"></span></td>
+							
+							<td rel="L14" class="lines-code chroma"><code class="code-inner">      Backward incompatible changes are done by bumping the version
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L15" data-line-number="15"></span></td>
+							
+							<td rel="L15" class="lines-code chroma"><code class="code-inner">      number in the protocol and interface names and resetting the
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L16" data-line-number="16"></span></td>
+							
+							<td rel="L16" class="lines-code chroma"><code class="code-inner">      interface version. Once the protocol is to be declared stable,
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L17" data-line-number="17"></span></td>
+							
+							<td rel="L17" class="lines-code chroma"><code class="code-inner">      the &#39;z&#39; prefix and the version number in the protocol and
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L18" data-line-number="18"></span></td>
+							
+							<td rel="L18" class="lines-code chroma"><code class="code-inner">      interface names are removed and the interface version number is
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L19" data-line-number="19"></span></td>
+							
+							<td rel="L19" class="lines-code chroma"><code class="code-inner">      reset.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L20" data-line-number="20"></span></td>
+							
+							<td rel="L20" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L21" data-line-number="21"></span></td>
+							
+							<td rel="L21" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L22" data-line-number="22"></span></td>
+							
+							<td rel="L22" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;interface</span> <span class="na">name=</span><span class="s">&#34;zdwl_ipc_manager_v2&#34;</span> <span class="na">version=</span><span class="s">&#34;2&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L23" data-line-number="23"></span></td>
+							
+							<td rel="L23" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;manage dwl state&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L24" data-line-number="24"></span></td>
+							
+							<td rel="L24" class="lines-code chroma"><code class="code-inner">      This interface is exposed as a global in wl_registry.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L25" data-line-number="25"></span></td>
+							
+							<td rel="L25" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L26" data-line-number="26"></span></td>
+							
+							<td rel="L26" class="lines-code chroma"><code class="code-inner">      Clients can use this interface to get a dwl_ipc_output.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L27" data-line-number="27"></span></td>
+							
+							<td rel="L27" class="lines-code chroma"><code class="code-inner">      After binding the client will recieve the dwl_ipc_manager.tags and dwl_ipc_manager.layout events.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L28" data-line-number="28"></span></td>
+							
+							<td rel="L28" class="lines-code chroma"><code class="code-inner">      The dwl_ipc_manager.tags and dwl_ipc_manager.layout events expose tags and layouts to the client.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L29" data-line-number="29"></span></td>
+							
+							<td rel="L29" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L30" data-line-number="30"></span></td>
+							
+							<td rel="L30" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L31" data-line-number="31"></span></td>
+							
+							<td rel="L31" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;release&#34;</span> <span class="na">type=</span><span class="s">&#34;destructor&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L32" data-line-number="32"></span></td>
+							
+							<td rel="L32" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;release dwl_ipc_manager&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L33" data-line-number="33"></span></td>
+							
+							<td rel="L33" class="lines-code chroma"><code class="code-inner">        Indicates that the client will not the dwl_ipc_manager object anymore.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L34" data-line-number="34"></span></td>
+							
+							<td rel="L34" class="lines-code chroma"><code class="code-inner">        Objects created through this instance are not affected.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L35" data-line-number="35"></span></td>
+							
+							<td rel="L35" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L36" data-line-number="36"></span></td>
+							
+							<td rel="L36" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L37" data-line-number="37"></span></td>
+							
+							<td rel="L37" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L38" data-line-number="38"></span></td>
+							
+							<td rel="L38" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;get_output&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L39" data-line-number="39"></span></td>
+							
+							<td rel="L39" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;get a dwl_ipc_outout for a wl_output&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L40" data-line-number="40"></span></td>
+							
+							<td rel="L40" class="lines-code chroma"><code class="code-inner">        Get a dwl_ipc_outout for the specified wl_output.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L41" data-line-number="41"></span></td>
+							
+							<td rel="L41" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L42" data-line-number="42"></span></td>
+							
+							<td rel="L42" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;id&#34;</span> <span class="na">type=</span><span class="s">&#34;new_id&#34;</span> <span class="na">interface=</span><span class="s">&#34;zdwl_ipc_output_v2&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L43" data-line-number="43"></span></td>
+							
+							<td rel="L43" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;output&#34;</span> <span class="na">type=</span><span class="s">&#34;object&#34;</span> <span class="na">interface=</span><span class="s">&#34;wl_output&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L44" data-line-number="44"></span></td>
+							
+							<td rel="L44" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L45" data-line-number="45"></span></td>
+							
+							<td rel="L45" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L46" data-line-number="46"></span></td>
+							
+							<td rel="L46" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;tags&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L47" data-line-number="47"></span></td>
+							
+							<td rel="L47" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Announces tag amount&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L48" data-line-number="48"></span></td>
+							
+							<td rel="L48" class="lines-code chroma"><code class="code-inner">        This event is sent after binding.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L49" data-line-number="49"></span></td>
+							
+							<td rel="L49" class="lines-code chroma"><code class="code-inner">        A roundtrip after binding guarantees the client recieved all tags.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L50" data-line-number="50"></span></td>
+							
+							<td rel="L50" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L51" data-line-number="51"></span></td>
+							
+							<td rel="L51" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;amount&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L52" data-line-number="52"></span></td>
+							
+							<td rel="L52" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L53" data-line-number="53"></span></td>
+							
+							<td rel="L53" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L54" data-line-number="54"></span></td>
+							
+							<td rel="L54" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;layout&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L55" data-line-number="55"></span></td>
+							
+							<td rel="L55" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Announces a layout&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L56" data-line-number="56"></span></td>
+							
+							<td rel="L56" class="lines-code chroma"><code class="code-inner">        This event is sent after binding.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L57" data-line-number="57"></span></td>
+							
+							<td rel="L57" class="lines-code chroma"><code class="code-inner">        A roundtrip after binding guarantees the client recieved all layouts.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L58" data-line-number="58"></span></td>
+							
+							<td rel="L58" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L59" data-line-number="59"></span></td>
+							
+							<td rel="L59" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;name&#34;</span> <span class="na">type=</span><span class="s">&#34;string&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L60" data-line-number="60"></span></td>
+							
+							<td rel="L60" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L61" data-line-number="61"></span></td>
+							
+							<td rel="L61" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;/interface&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L62" data-line-number="62"></span></td>
+							
+							<td rel="L62" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L63" data-line-number="63"></span></td>
+							
+							<td rel="L63" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;interface</span> <span class="na">name=</span><span class="s">&#34;zdwl_ipc_output_v2&#34;</span> <span class="na">version=</span><span class="s">&#34;2&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L64" data-line-number="64"></span></td>
+							
+							<td rel="L64" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;control dwl output&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L65" data-line-number="65"></span></td>
+							
+							<td rel="L65" class="lines-code chroma"><code class="code-inner">      Observe and control a dwl output.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L66" data-line-number="66"></span></td>
+							
+							<td rel="L66" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L67" data-line-number="67"></span></td>
+							
+							<td rel="L67" class="lines-code chroma"><code class="code-inner">      Events are double-buffered:
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L68" data-line-number="68"></span></td>
+							
+							<td rel="L68" class="lines-code chroma"><code class="code-inner">      Clients should cache events and redraw when a dwl_ipc_output.frame event is sent.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L69" data-line-number="69"></span></td>
+							
+							<td rel="L69" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L70" data-line-number="70"></span></td>
+							
+							<td rel="L70" class="lines-code chroma"><code class="code-inner">      Request are not double-buffered:
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L71" data-line-number="71"></span></td>
+							
+							<td rel="L71" class="lines-code chroma"><code class="code-inner">      The compositor will update immediately upon request.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L72" data-line-number="72"></span></td>
+							
+							<td rel="L72" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L73" data-line-number="73"></span></td>
+							
+							<td rel="L73" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L74" data-line-number="74"></span></td>
+							
+							<td rel="L74" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;enum</span> <span class="na">name=</span><span class="s">&#34;tag_state&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L75" data-line-number="75"></span></td>
+							
+							<td rel="L75" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&#34;none&#34;</span> <span class="na">value=</span><span class="s">&#34;0&#34;</span> <span class="na">summary=</span><span class="s">&#34;no state&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L76" data-line-number="76"></span></td>
+							
+							<td rel="L76" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&#34;active&#34;</span> <span class="na">value=</span><span class="s">&#34;1&#34;</span> <span class="na">summary=</span><span class="s">&#34;tag is active&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L77" data-line-number="77"></span></td>
+							
+							<td rel="L77" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&#34;urgent&#34;</span> <span class="na">value=</span><span class="s">&#34;2&#34;</span> <span class="na">summary=</span><span class="s">&#34;tag has at least one urgent client&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L78" data-line-number="78"></span></td>
+							
+							<td rel="L78" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/enum&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L79" data-line-number="79"></span></td>
+							
+							<td rel="L79" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L80" data-line-number="80"></span></td>
+							
+							<td rel="L80" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;release&#34;</span> <span class="na">type=</span><span class="s">&#34;destructor&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L81" data-line-number="81"></span></td>
+							
+							<td rel="L81" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;release dwl_ipc_outout&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L82" data-line-number="82"></span></td>
+							
+							<td rel="L82" class="lines-code chroma"><code class="code-inner">        Indicates to that the client no longer needs this dwl_ipc_output.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L83" data-line-number="83"></span></td>
+							
+							<td rel="L83" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L84" data-line-number="84"></span></td>
+							
+							<td rel="L84" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L85" data-line-number="85"></span></td>
+							
+							<td rel="L85" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L86" data-line-number="86"></span></td>
+							
+							<td rel="L86" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;toggle_visibility&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L87" data-line-number="87"></span></td>
+							
+							<td rel="L87" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Toggle client visibilty&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L88" data-line-number="88"></span></td>
+							
+							<td rel="L88" class="lines-code chroma"><code class="code-inner">        Indicates the client should hide or show themselves.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L89" data-line-number="89"></span></td>
+							
+							<td rel="L89" class="lines-code chroma"><code class="code-inner">        If the client is visible then hide, if hidden then show.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L90" data-line-number="90"></span></td>
+							
+							<td rel="L90" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L91" data-line-number="91"></span></td>
+							
+							<td rel="L91" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L92" data-line-number="92"></span></td>
+							
+							<td rel="L92" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L93" data-line-number="93"></span></td>
+							
+							<td rel="L93" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;active&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L94" data-line-number="94"></span></td>
+							
+							<td rel="L94" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the selected output.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L95" data-line-number="95"></span></td>
+							
+							<td rel="L95" class="lines-code chroma"><code class="code-inner">        Indicates if the output is active. Zero is invalid, nonzero is valid.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L96" data-line-number="96"></span></td>
+							
+							<td rel="L96" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L97" data-line-number="97"></span></td>
+							
+							<td rel="L97" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;active&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L98" data-line-number="98"></span></td>
+							
+							<td rel="L98" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L99" data-line-number="99"></span></td>
+							
+							<td rel="L99" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L100" data-line-number="100"></span></td>
+							
+							<td rel="L100" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;tag&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L101" data-line-number="101"></span></td>
+							
+							<td rel="L101" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the state of a tag.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L102" data-line-number="102"></span></td>
+							
+							<td rel="L102" class="lines-code chroma"><code class="code-inner">        Indicates that a tag has been updated.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L103" data-line-number="103"></span></td>
+							
+							<td rel="L103" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L104" data-line-number="104"></span></td>
+							
+							<td rel="L104" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;tag&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;Index of the tag&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L105" data-line-number="105"></span></td>
+							
+							<td rel="L105" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;state&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">enum=</span><span class="s">&#34;tag_state&#34;</span> <span class="na">summary=</span><span class="s">&#34;The state of the tag.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L106" data-line-number="106"></span></td>
+							
+							<td rel="L106" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;clients&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;The number of clients in the tag.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L107" data-line-number="107"></span></td>
+							
+							<td rel="L107" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;focused&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;If there is a focused client. Nonzero being valid, zero being invalid.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L108" data-line-number="108"></span></td>
+							
+							<td rel="L108" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L109" data-line-number="109"></span></td>
+							
+							<td rel="L109" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L110" data-line-number="110"></span></td>
+							
+							<td rel="L110" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;layout&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L111" data-line-number="111"></span></td>
+							
+							<td rel="L111" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the layout.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L112" data-line-number="112"></span></td>
+							
+							<td rel="L112" class="lines-code chroma"><code class="code-inner">        Indicates a new layout is selected.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L113" data-line-number="113"></span></td>
+							
+							<td rel="L113" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L114" data-line-number="114"></span></td>
+							
+							<td rel="L114" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;layout&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;Index of the layout.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L115" data-line-number="115"></span></td>
+							
+							<td rel="L115" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L116" data-line-number="116"></span></td>
+							
+							<td rel="L116" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L117" data-line-number="117"></span></td>
+							
+							<td rel="L117" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;title&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L118" data-line-number="118"></span></td>
+							
+							<td rel="L118" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the title.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L119" data-line-number="119"></span></td>
+							
+							<td rel="L119" class="lines-code chroma"><code class="code-inner">        Indicates the title has changed.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L120" data-line-number="120"></span></td>
+							
+							<td rel="L120" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L121" data-line-number="121"></span></td>
+							
+							<td rel="L121" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;title&#34;</span> <span class="na">type=</span><span class="s">&#34;string&#34;</span> <span class="na">summary=</span><span class="s">&#34;The new title name.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L122" data-line-number="122"></span></td>
+							
+							<td rel="L122" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L123" data-line-number="123"></span></td>
+							
+							<td rel="L123" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L124" data-line-number="124"></span></td>
+							
+							<td rel="L124" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;appid&#34;</span> <span class="na">since=</span><span class="s">&#34;1&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L125" data-line-number="125"></span></td>
+							
+							<td rel="L125" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the appid.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L126" data-line-number="126"></span></td>
+							
+							<td rel="L126" class="lines-code chroma"><code class="code-inner">        Indicates the appid has changed.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L127" data-line-number="127"></span></td>
+							
+							<td rel="L127" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L128" data-line-number="128"></span></td>
+							
+							<td rel="L128" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;appid&#34;</span> <span class="na">type=</span><span class="s">&#34;string&#34;</span> <span class="na">summary=</span><span class="s">&#34;The new appid.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L129" data-line-number="129"></span></td>
+							
+							<td rel="L129" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L130" data-line-number="130"></span></td>
+							
+							<td rel="L130" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L131" data-line-number="131"></span></td>
+							
+							<td rel="L131" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;layout_symbol&#34;</span> <span class="na">since=</span><span class="s">&#34;1&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L132" data-line-number="132"></span></td>
+							
+							<td rel="L132" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the current layout symbol&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L133" data-line-number="133"></span></td>
+							
+							<td rel="L133" class="lines-code chroma"><code class="code-inner">          Indicates the layout has changed. Since layout symbols are dynamic.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L134" data-line-number="134"></span></td>
+							
+							<td rel="L134" class="lines-code chroma"><code class="code-inner">          As opposed to the zdwl_ipc_manager.layout event, this should take precendence when displaying.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L135" data-line-number="135"></span></td>
+							
+							<td rel="L135" class="lines-code chroma"><code class="code-inner">          You can ignore the zdwl_ipc_output.layout event.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L136" data-line-number="136"></span></td>
+							
+							<td rel="L136" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L137" data-line-number="137"></span></td>
+							
+							<td rel="L137" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;layout&#34;</span> <span class="na">type=</span><span class="s">&#34;string&#34;</span> <span class="na">summary=</span><span class="s">&#34;The new layout&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L138" data-line-number="138"></span></td>
+							
+							<td rel="L138" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L139" data-line-number="139"></span></td>
+							
+							<td rel="L139" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L140" data-line-number="140"></span></td>
+							
+							<td rel="L140" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;frame&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L141" data-line-number="141"></span></td>
+							
+							<td rel="L141" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;The update sequence is done.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L142" data-line-number="142"></span></td>
+							
+							<td rel="L142" class="lines-code chroma"><code class="code-inner">        Indicates that a sequence of status updates have finished and the client should redraw.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L143" data-line-number="143"></span></td>
+							
+							<td rel="L143" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L144" data-line-number="144"></span></td>
+							
+							<td rel="L144" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L145" data-line-number="145"></span></td>
+							
+							<td rel="L145" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L146" data-line-number="146"></span></td>
+							
+							<td rel="L146" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;set_tags&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L147" data-line-number="147"></span></td>
+							
+							<td rel="L147" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Set the active tags of this output&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L148" data-line-number="148"></span></td>
+							
+							<td rel="L148" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;tagmask&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;bitmask of the tags that should be set.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L149" data-line-number="149"></span></td>
+							
+							<td rel="L149" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;toggle_tagset&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;toggle the selected tagset, zero for invalid, nonzero for valid.&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L150" data-line-number="150"></span></td>
+							
+							<td rel="L150" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L151" data-line-number="151"></span></td>
+							
+							<td rel="L151" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L152" data-line-number="152"></span></td>
+							
+							<td rel="L152" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;set_client_tags&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L153" data-line-number="153"></span></td>
+							
+							<td rel="L153" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Set the tags of the focused client.&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L154" data-line-number="154"></span></td>
+							
+							<td rel="L154" class="lines-code chroma"><code class="code-inner">        The tags are updated as follows:
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L155" data-line-number="155"></span></td>
+							
+							<td rel="L155" class="lines-code chroma"><code class="code-inner">        new_tags = (current_tags AND and_tags) XOR xor_tags
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L156" data-line-number="156"></span></td>
+							
+							<td rel="L156" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L157" data-line-number="157"></span></td>
+							
+							<td rel="L157" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;and_tags&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L158" data-line-number="158"></span></td>
+							
+							<td rel="L158" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;xor_tags&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L159" data-line-number="159"></span></td>
+							
+							<td rel="L159" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L160" data-line-number="160"></span></td>
+							
+							<td rel="L160" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L161" data-line-number="161"></span></td>
+							
+							<td rel="L161" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;request</span> <span class="na">name=</span><span class="s">&#34;set_layout&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L162" data-line-number="162"></span></td>
+							
+							<td rel="L162" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Set the layout of this output&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L163" data-line-number="163"></span></td>
+							
+							<td rel="L163" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;index&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;index of a layout recieved by dwl_ipc_manager.layout&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L164" data-line-number="164"></span></td>
+							
+							<td rel="L164" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/request&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L165" data-line-number="165"></span></td>
+							
+							<td rel="L165" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L166" data-line-number="166"></span></td>
+							
+							<td rel="L166" class="lines-code chroma"><code class="code-inner">    <span class="c">&lt;!--</span><span class="c"> Version 2 </span><span class="c">--&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L167" data-line-number="167"></span></td>
+							
+							<td rel="L167" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;fullscreen&#34;</span> <span class="na">since=</span><span class="s">&#34;2&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L168" data-line-number="168"></span></td>
+							
+							<td rel="L168" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update fullscreen status&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L169" data-line-number="169"></span></td>
+							
+							<td rel="L169" class="lines-code chroma"><code class="code-inner">          Indicates if the selected client on this output is fullscreen.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L170" data-line-number="170"></span></td>
+							
+							<td rel="L170" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L171" data-line-number="171"></span></td>
+							
+							<td rel="L171" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;is_fullscreen&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;If the selected client is fullscreen. Nonzero is valid, zero invalid&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L172" data-line-number="172"></span></td>
+							
+							<td rel="L172" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L173" data-line-number="173"></span></td>
+							
+							<td rel="L173" class="lines-code chroma"><code class="code-inner">
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L174" data-line-number="174"></span></td>
+							
+							<td rel="L174" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">&#34;floating&#34;</span> <span class="na">since=</span><span class="s">&#34;2&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L175" data-line-number="175"></span></td>
+							
+							<td rel="L175" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;description</span> <span class="na">summary=</span><span class="s">&#34;Update the floating status&#34;</span><span class="nt">&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L176" data-line-number="176"></span></td>
+							
+							<td rel="L176" class="lines-code chroma"><code class="code-inner">          Indicates if the selected client on this output is floating.
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L177" data-line-number="177"></span></td>
+							
+							<td rel="L177" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;/description&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L178" data-line-number="178"></span></td>
+							
+							<td rel="L178" class="lines-code chroma"><code class="code-inner">      <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&#34;is_floating&#34;</span> <span class="na">type=</span><span class="s">&#34;uint&#34;</span> <span class="na">summary=</span><span class="s">&#34;If the selected client is floating. Nonzero is valid, zero invalid&#34;</span><span class="nt">/&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L179" data-line-number="179"></span></td>
+							
+							<td rel="L179" class="lines-code chroma"><code class="code-inner">    <span class="nt">&lt;/event&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L180" data-line-number="180"></span></td>
+							
+							<td rel="L180" class="lines-code chroma"><code class="code-inner">  <span class="nt">&lt;/interface&gt;</span>
+</code></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="lines-num"><span id="L181" data-line-number="181"></span></td>
+							
+							<td rel="L181" class="lines-code chroma"><code class="code-inner"><span class="nt">&lt;/protocol&gt;</span>
+</code></td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<div class="code-line-menu tippy-target">
+					
+					<a class="item view_git_blame" role="menuitem" href="/notchoc/dwl/blame/commit/b4753ed2a0d585bc4c67cad3c565ac3435171080/protocols/dwl-ipc-unstable-v2.xml">View git blame</a>
+					<a class="item copy-line-permalink" role="menuitem" data-url="/notchoc/dwl/src/commit/b4753ed2a0d585bc4c67cad3c565ac3435171080/protocols/dwl-ipc-unstable-v2.xml">Copy permalink</a>
+				</div>
+				
+			
+		</div>
+	</div>
+</div>
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer class="page-footer" role="group" aria-label="Footer">
+	<div class="grid" aria-label="Links">
+		<div class="not-mobile">
+			<div class="branding" aria-hidden="true">
+				<img src="https://design.codeberg.org/logo-kit/icon_inverted.svg" alt="Logo">
+			</div>
+			<div class="powered-by">
+				<div class="title">Powered by</div>
+				<p class="tw-mb-0">
+					<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org" aria-label="Forgejo">
+						<img class="light-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark.svg" alt="Forgejo logo">
+						<img class="dark-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark-mono.svg" alt="Forgejo logo">
+					</a>
+				</p>
+				with <a class="tw-mt-0" href="/Codeberg-Infrastructure/forgejo" target="_blank">modifications</a>
+			</div>
+		</div>
+		<div>
+			<b id="codeberg-codeberg">Codeberg</b>
+			<ul>
+				<a href="https://blog.codeberg.org" target="_blank">Blog</a>
+				<li><a href="https://docs.codeberg.org" target="_blank">Documentation</a></li>
+				<li><a href="/Codeberg/Community/issues">Community Issues</a></li>
+				
+				<li><a href="/Codeberg/Contributing">Contributing</a>
+				<li><a href="https://docs.codeberg.org/contact/#abuse" target="_blank">Report Abuse</a>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-association">Association</b>
+			<ul>
+				<li><a href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F" target="_blank">Who are we?</a></li>
+				<li><a href="/codeberg/org/src/en/bylaws.md" target="_blank">Bylaws / Satzung</a></li>
+				<li><a href="https://docs.codeberg.org/improving-codeberg/donate/" target="_blank">Donate</a></li>
+				<li><a href="https://join.codeberg.org" target="_blank">Join / Support</a></li>
+				<li><a href="https://docs.codeberg.org/contact/" target="_blank">Contact</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-service">Services</b>
+			<ul>
+				<li><a href="https://codeberg.page" target="_blank">Codeberg Pages</a></li>
+				<li><a href="https://translate.codeberg.org" target="_blank">Codeberg Translate</a></li>
+				<li><a href="https://docs.codeberg.org/ci/#using-codeberg's-instance-of-woodpecker-ci" target="_blank">Woodpecker CI</a></li>
+				
+					<li><a href="/api/swagger">Forgejo API</a></li>
+				
+				<li><a href="https://status.codeberg.eu" target="_blank">Status Page</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-legal">Legal</b>
+			<ul>
+				<li><a href="/codeberg/org/src/Imprint.md" target="_blank">Imprint / Impressum</a></li>
+				<li><a href="/codeberg/org/src/PrivacyPolicy.md" target="_blank">Privacy Policy</a></li>
+				<li><a href="/assets/licenses.txt">Licenses</a></li>
+				<li><a href="/codeberg/org/src/TermsOfUse.md">Terms of Use</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom-grid">
+		<div class="footer-social">
+			<a href="https://social.anoxinon.de/@Codeberg" target="_blank" rel="noopener noreferrer">Mastodon</a> |
+			<a href="matrix:r/codeberg-space:matrix.org?action=join" target="_blank" rel="noopener noreferrer">Matrix Space</a>
+			<a href="https://matrix.to/#/#codeberg-space:matrix.org" target="_blank" rel="noopener noreferrer">(Web link)</a>
+			<button class="btn interact-fg tw-p-2" data-clipboard-text="#codeberg-space:matrix.org" data-tooltip-content="Copy to clipboard"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button>
+			<p class="only-mobile">
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org">Powered by Forgejo</a>
+			</p>
+		</div>
+		<div class="footer-language-switch">
+			<div class="ui language bottom floating slide up dropdown link item button">
+				<svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+				<div class="text">English</div>
+				<div class="menu language-menu">
+					
+						<a lang="id-ID" data-url="/?lang=id-ID" class="item ">Bahasa Indonesia</a>
+					
+						<a lang="da" data-url="/?lang=da" class="item ">Dansk</a>
+					
+						<a lang="de-DE" data-url="/?lang=de-DE" class="item ">Deutsch</a>
+					
+						<a lang="en-US" data-url="/?lang=en-US" class="item active selected">English</a>
+					
+						<a lang="es-ES" data-url="/?lang=es-ES" class="item ">Español</a>
+					
+						<a lang="eo" data-url="/?lang=eo" class="item ">Esperanto</a>
+					
+						<a lang="fil" data-url="/?lang=fil" class="item ">Filipino</a>
+					
+						<a lang="fr-FR" data-url="/?lang=fr-FR" class="item ">Français</a>
+					
+						<a lang="it-IT" data-url="/?lang=it-IT" class="item ">Italiano</a>
+					
+						<a lang="lv-LV" data-url="/?lang=lv-LV" class="item ">Latviešu</a>
+					
+						<a lang="hu-HU" data-url="/?lang=hu-HU" class="item ">Magyar nyelv</a>
+					
+						<a lang="nl-NL" data-url="/?lang=nl-NL" class="item ">Nederlands</a>
+					
+						<a lang="nds" data-url="/?lang=nds" class="item ">Plattdüütsch</a>
+					
+						<a lang="pl-PL" data-url="/?lang=pl-PL" class="item ">Polski</a>
+					
+						<a lang="pt-PT" data-url="/?lang=pt-PT" class="item ">Português de Portugal</a>
+					
+						<a lang="pt-BR" data-url="/?lang=pt-BR" class="item ">Português do Brasil</a>
+					
+						<a lang="sl" data-url="/?lang=sl" class="item ">Slovenščina</a>
+					
+						<a lang="fi-FI" data-url="/?lang=fi-FI" class="item ">Suomi</a>
+					
+						<a lang="sv-SE" data-url="/?lang=sv-SE" class="item ">Svenska</a>
+					
+						<a lang="tr-TR" data-url="/?lang=tr-TR" class="item ">Türkçe</a>
+					
+						<a lang="cs-CZ" data-url="/?lang=cs-CZ" class="item ">Čeština</a>
+					
+						<a lang="el-GR" data-url="/?lang=el-GR" class="item ">Ελληνικά</a>
+					
+						<a lang="bg" data-url="/?lang=bg" class="item ">Български</a>
+					
+						<a lang="ru-RU" data-url="/?lang=ru-RU" class="item ">Русский</a>
+					
+						<a lang="uk-UA" data-url="/?lang=uk-UA" class="item ">Українська</a>
+					
+						<a lang="fa-IR" data-url="/?lang=fa-IR" class="item ">فارسی</a>
+					
+						<a lang="ja-JP" data-url="/?lang=ja-JP" class="item ">日本語</a>
+					
+						<a lang="zh-CN" data-url="/?lang=zh-CN" class="item ">简体中文</a>
+					
+						<a lang="zh-TW" data-url="/?lang=zh-TW" class="item ">繁體中文（台灣）</a>
+					
+						<a lang="zh-HK" data-url="/?lang=zh-HK" class="item ">繁體中文（香港）</a>
+					
+						<a lang="ko-KR" data-url="/?lang=ko-KR" class="item ">한국어</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tw-hidden">
+		
+			Page: 115ms<br>
+			Template: 14ms
+		
+	</div>
+    
+	
+		<div class="symbol-of-tolerance" role="img"></div>
+	
+</footer>
+
+
+	<script src="/assets/js/index.js?v=13.0.0-dev-651-a48dce80~gitea-1.22.0" onerror="alert('Failed to load asset files from {path}. Please make sure the asset files can be accessed.'.replace('{path}', this.src))"></script>
+
+	
+</body>
+</html>
+
