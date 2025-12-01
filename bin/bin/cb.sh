@@ -24,7 +24,7 @@ case $cp in
         *) echo "enter a laptop name" && exit 0 ;;
 esac
 
-xbps-query -l > $HOME/vd/misc/$cp.lst
+#xbps-query -l > $HOME/vd/misc/$cp.lst
 
 bh=~/.bash_history
 fh=~/.local/share/fish/fish_history
