@@ -7,7 +7,7 @@ handle_error() {
   trap 'handle_error $LINENO' ERR
 
 
-a=$(hostnamectl | rg Model | awk '{print $3}')
+a=$(inxi -Fxz | grep product | awk '{print $6}')
 
 if [ $a == LOQ ];then
 cp=q
