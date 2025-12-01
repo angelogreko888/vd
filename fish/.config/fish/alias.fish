@@ -46,7 +46,7 @@ alias cdd='cd ~/Downloads/'
 alias cdc='cd /mnt/data/'
 alias cg='cd ~/git/'
 alias cdf='cd ~/vd/'
-alias cdw='cd ~/vd/dwl'
+alias cdw='cd ~/dwl'
 
 # yt-dlp
 alias yt="yt-dlp -x --audio-format mp3 -o='~/Music/%(title)s.%(ext)s'"

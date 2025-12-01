@@ -7,5 +7,9 @@
 	rsync search-history.db  ~/vd/freetube/.config/FreeTube/search-history.db
 	rsync settings.db  ~/vd/freetube/.config/FreeTube/settings.db
 
+
+	cd ~/dwl
+	rsync config.h ~/vd/dwl/config.h
+
 	cd ~/vd
 	git status
