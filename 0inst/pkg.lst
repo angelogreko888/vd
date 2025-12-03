@@ -1,3 +1,16 @@
+clang
+cmake
+libspa-bluetooth
+wireplumber
+chrony
+mc
+dbus-elogind
+polkit-elogind
+alsa-firmware
+
+
+
+
 alsa-pipewire 
 android-tools 
 avahi 

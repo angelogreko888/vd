@@ -29,4 +29,6 @@ done
 
 sudo xbps-install -S
 
+#sudo xbps-install pam_rundir xdg-user-dirs
+#echo"-session        optional        pam_rundir.so" | sudo tee -a /etc/pam.d/login
 
