@@ -46,7 +46,7 @@ alias cdd='cd ~/Downloads/'
 alias cdc='cd /mnt/data/'
 alias cg='cd ~/git/'
 alias cdf='cd ~/vd/'
-alias cdw='cd ~/dwl'
+alias cdw='cd ~/vd/dl'
 
 # yt-dlp
 alias yt="yt-dlp -x --audio-format mp3 -o='~/Music/%(title)s.%(ext)s'"
@@ -149,4 +149,4 @@ alias ph='~/bin/phonebup.sh'
 
 alias dd='~/bin/dd.sh'
 
-alias ncc='nano ~/dwl/config.def.h'
+alias ncc='nano ~//vd/dl/config.def.h'
