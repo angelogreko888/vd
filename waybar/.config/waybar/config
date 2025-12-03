@@ -23,10 +23,11 @@
 //	"hyprland/workspaces",
 	"dwl/tags",
 	"wlr/taskbar",
+	"sway/workspaces",
     ],
 
   "modules-center": [
-	"dwl/language",
+	"sway/language",
 	 "custom/clock",
 	"pulseaudio",
 ],
@@ -47,12 +48,29 @@
 
     // Modules configuration
 
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
 
-"dwl/tags":{
-	"num-tags": 9,
-	"hide-vacant": true,
-	"tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-},
+
+//"dwl/tags":{
+//	"num-tags": 9,
+//	"hide-vacant": true,
+//	"tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+//},
 
 
 
@@ -278,7 +296,7 @@
         "on-click":"blueman-manager &"
     },
 
-    "dwl/language":{
+    "sway/language":{
 	    "format": "{}",
         "format-en": "<span color='#eeeeee'>en </span>",
 	    "format-gr": "<span color='#00ffff'>gr </span>",
