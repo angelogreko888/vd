@@ -149,4 +149,4 @@ alias ph='~/bin/phonebup.sh'
 
 alias dd='~/bin/dd.sh'
 
-alias ncc='nano ~/vd/dwl/config.def.h'
+alias ncc='nano ~/dwl/config.def.h'
