@@ -134,7 +134,7 @@ alias se='~/bin/sleep.sh'
 alias ee='pgrep sleep'
 alias mk='makoctl history'
 
-alias cdv='cd /mnt/VT'
+alias cdv='cd /mnt/vt'
 alias cds='cd /mnt/shared-data'
 alias vv='cd ~/vago'
 

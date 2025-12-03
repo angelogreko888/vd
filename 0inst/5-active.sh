@@ -28,6 +28,8 @@ SDL_AUDIODRIVER=pipewire
 
 sudo cp ~/vd/no/sd /usr/bin
 
+sudo sed -i 's/25/50/' /etc/sv/zramen/conf
+
 cat ~/vd/misc/fish_history >> ~/.local/share/fish/fish_history
 cat ~/vd/misc/.bash_history >> ~/.bash_history
 
