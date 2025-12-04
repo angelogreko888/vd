@@ -23,7 +23,7 @@ done
 
 echo "greco" | tee /etc/hostname
 
-sed -i '131s/#//' /etc/default/lib-locales
+sed -i '131s/#//' /etc/default/libc-locales
 
 useradd -mG wheel,audio,video,storage,optical,plugdev,input vago
 

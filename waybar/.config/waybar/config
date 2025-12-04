@@ -20,10 +20,9 @@
 //	"custom/swaync",
 //	 "custom/notifications",
 	"idle_inhibitor",
-//	"hyprland/workspaces",
-	"dwl/tags",
-	"wlr/taskbar",
-	"sway/workspaces",
+//	"sway/workspaces"
+	"dwl/tags"
+//	"wlr/taskbar",
     ],
 
   "modules-center": [
@@ -297,10 +296,10 @@
     },
 
     "sway/language":{
-	    "format": "{}",
-        "format-en": "<span color='#eeeeee'>en </span>",
-	    "format-gr": "<span color='#00ffff'>gr </span>",
-	    "format-he": "<span color='#e57474'>he </span>",
+	    "format": "{short}",
+//        "format-en": "<span color='#eeeeee'>en </span>",
+//	    "format-gr": "<span color='#00ffff'>gr </span>",
+//	    "format-he": "<span color='#e57474'>he </span>",
 //        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
 	},
 

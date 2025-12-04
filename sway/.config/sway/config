@@ -1,0 +1,7 @@
+
+input type:keyboard {
+    xkb_layout us,gr,he
+    xkb_options grp:shift_alt_toggle
+    repeat_delay 170
+    repeat_rate 50
+}
