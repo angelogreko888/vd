@@ -1,3 +1,7 @@
+libxkbcommon-tools
+libxkbcommon
+libxkbcommon-devel
+xtools
 ImageMagick
 adwaita-qt6
 alsa-firmware
