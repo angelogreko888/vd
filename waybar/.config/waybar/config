@@ -22,8 +22,8 @@
 	"idle_inhibitor",
 //	"sway/workspaces"
 	"dwl/tags"
-//	"wlr/taskbar",
-    ],
+//	"wlr/taskbar"
+],
 
   "modules-center": [
 	"sway/language",
@@ -297,9 +297,10 @@
 
     "sway/language":{
 	    "format": "{short}",
-        "format-en": "<span color='#eeeeee'>en </span>",
-	    "format-gr": "<span color='#00ffff'>gr </span>",
-	    "format-he": "<span color='#e57474'>he </span>",
+//	    "format-en": "<span color='#eeeeee'>en </span>",
+//	    "format-gr": "<span color='#00ffff'>gr </span>",
+//	    "format-il": "<span color='#e57474'>he </span>",
+//	"on-click": "swaymsg input type:keyboard xkb_switch_layout next",
 //        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
 	},
 
